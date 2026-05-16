@@ -1,0 +1,159 @@
+Week 10: Show Me Your Process
+Two Simple Problems - Steps 1-3 Only
+
+1 Weekly Exercise: Show Me Your Process
+What You Submit: Just Steps 1, 2, and 3 for two problems. NO CODE.
+
+This week is about proving you can THINK about a problem before jumping to AI or code.
+
+1.1 Problem 1: Tip Calculator
+1.1.1 The Scenario
+You work at a Perth restaurant. The manager wants a simple tool where staff can enter:
+
+The bill amount (e.g., /45.80)
+The tip percentage (e.g., 15%)
+And get back:
+
+The tip amount
+The total amount to charge
+1.1.2 What You Must Submit
+STEP 1: Understand the Problem
+
+In your own words, what is this program supposed to do? (2-3 sentences)
+
+This program helps restaurant workers quickly work out a customer’s tip and the final amount they need to pay. The worker enters the total bill and the tip percentage, and the program calculates both the tip amount and the total bill including the tip.
+
+
+STEP 2: Identify Inputs and Outputs
+
+INPUTS:Bill amount entered by the staff member
+Tip percentage entered by the staff member
+Both inputs are numbers (decimal values or percentages)
+
+OUTPUTS:The tip amount in dollars
+The final total amount to charge the customer
+The results should be shown as currency values (for example, /5.37)
+
+
+STEP 3: Work It By Hand
+
+Show me you can do this with a calculator. Use this example:
+
+Bill amount: /45.80
+Tip percentage: 15%
+Write the steps:
+
+[First calculation I would do]A Book is 5 days late
+
+My calculation:
+5 × 0.50 = 2.50
+
+Fine:
+$2.50
+[Second calculation]My calculation:
+25 × 0.50 = 12.50
+
+Since the fine is higher than the maximum allowed fine, the program should cap it at /10.00.
+
+Fine:
+$10.00
+
+Special note:
+The calculated fine is more than the allowed maximum, so the program shows the maximum fine instead.
+[Final step]My calculation:
+0 × 0.50 = 0
+
+Fine:
+$0.00
+[What I would tell the staff member]“Please enter the customer’s total bill amount and the tip percentage. The program will automatically calculate the tip and display the final amount the customer needs to pay
+1.2 Problem 2: Late Fee Calculator
+1.2.1 The Scenario
+You work for a library in Perth. Books are due back in 14 days. For every day late, there’s a /0.50 fine (maximum /10.00).
+
+The librarian wants a program where they enter:
+
+How many days the book is overdue
+And get back:
+
+The fine amount (or “Maximum fine reached” if it’s over $10)
+1.2.2 What You Must Submit
+STEP 1: Understand the Problem
+
+In your own words, what is this program supposed to do? (2-3 sentences)
+
+This program helps library staff calculate fines for overdue books. The librarian enters how many days the book is late, and the program calculates the fine automatically. If the fine becomes more than $10.00, the program will only charge the maximum amount of /10.00.
+
+
+STEP 2: Identify Inputs and Outputs
+
+INPUTS:The number of days the book is overdue
+The input is a whole number
+
+OUTPUTS:
+The fine amount the customer must pay
+A message saying “Maximum fine reached” if the fine is over /10.00
+The result is shown in dollars
+
+STEP 3: Work It By Hand
+
+Show me you understand the logic. Calculate these three cases manually:
+
+Case A: Book is 5 days late
+
+My calculation: Case A: Book is 5 days late
+My calculation:
+5 × /0.50 = /.50
+Fine: /2.50
+
+Case B: Book is 25 days late
+My calculation:
+25 × /0.50 = /12.50
+Fine:
+/10.00
+Special note:
+The fine is capped at /10.00 because that is the maximum fine allowed.
+
+Case C: Book is 0 days late
+Fine:/0.00
+1.3 Submission Requirements
+Create a Google Colab notebook
+Use markdown cells to answer all the questions above
+Export your AI conversation (if you used AI to check your thinking)
+Save as AI_conversation.txt
+Add to your GitHub repo
+Save to GitHub with commit message: “Week 10 - Process documentation”
+NO CODE REQUIRED
+
+1.3.1 About Using AI
+You SHOULD use AI to:
+
+Check if your manual calculations are correct
+Verify your understanding of the problem
+Ask “did I identify all the inputs?”
+But your submitted answers must be in YOUR words, showing YOUR thinking.
+
+1.4 Marking
+Each problem is marked Complete/Incomplete:
+
+Complete: All three steps answered with genuine effort + AI conversation file in repo (if used)
+Incomplete: Missing steps, one-word answers, or no evidence of checking work
+1.5 What I’m Looking For
+✅ Good Answer (Step 1): “This program helps restaurant staff calculate tips quickly. They type in the bill amount and what percentage tip they want to add, and the program tells them the tip amount and the new total.”
+
+❌ Lazy Answer:
+
+“Calculate tips.”
+
+✅ Good Answer (Step 3 - Tip Calculator):
+
+Take /45.80 and multiply by 0.15 to get the tip: /6.87
+Add /6.87 to /45.80 to get the total: $52.67
+Tell the staff member: “Tip is $6.87, total charge is $52.67”
+❌ Lazy Answer:
+
+“Calculate 15% and add it.”
+
+1.6 Why No Code This Week?
+Because I’m testing whether you can THINK about problems, not whether you can get AI to write code for you.
+
+If you can’t do Steps 1-3, then you don’t understand the problem well enough to use AI effectively anyway.
