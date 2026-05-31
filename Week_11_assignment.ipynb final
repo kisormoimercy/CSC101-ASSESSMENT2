@@ -1,0 +1,433 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/kisormoimercy/CSC101-ASSESSMENT2/blob/main/Week_11_assignment.ipynb%20final\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Wf5KrEb6vrkR"
+      },
+      "source": [
+        "Week 11 assignment"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Module 1\n",
+        "\n",
+        "Create a function called celsius_to_fahrenheit(celsius) that takes a temperature in Celsius and converts it to Fahrenheit using the formula:\n",
+        "F=(C×9/5​)+32\n",
+        "\n",
+        "Prompt: Provide at least 3 Examples of inputs and out puts and 2 edge cases\n",
+        "| Input (°C) | Output (°F) |\n",
+        "| ---------- | ----------- |\n",
+        "| 0          | 32          |\n",
+        "| 25         | 77          |\n",
+        "| 100        | 212         |\n",
+        "\n",
+        "\n",
+        "Edge cases\n",
+        "| Input (°C) | Expected Output (°F) | Reason                    |\n",
+        "| ---------- | -------------------- | ------------------------- |\n",
+        "| -40        | -40                  | Same value in both scales |\n",
+        "| -273.15    | -459.67              | Absolute\n",
+        "zero             |\n",
+        "\n",
+        "Prompt:\n",
+        "Write a Python function called celsius_to_fahrenheit(celsius) that converts a temperature from Celsius to Fahrenheit and returns the result.\"\n",
+        "\n",
+        "Example Implementation\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "ce-Gyu0UWAst"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "3jTB4ttilJh9"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def celsius_to_fahrenheit(celsius):\n",
+        "    return (celsius * 9/5) + 32"
+      ],
+      "metadata": {
+        "id": "Dl_io24GaF9C"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Verify with Assertions"
+      ],
+      "metadata": {
+        "id": "_km5oBk4adi6"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "assert celsius_to_fahrenheit(0) == 32\n",
+        "assert celsius_to_fahrenheit(25) == 77\n",
+        "assert celsius_to_fahrenheit(100) == 212\n",
+        "assert celsius_to_fahrenheit(-40) == -40\n",
+        "assert round(celsius_to_fahrenheit(-273.15), 2) == -459.67\n",
+        "\n",
+        "print(\"All tests passed!\")"
+      ],
+      "metadata": {
+        "id": "rMqv8HfkbQH8"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Prompt:\n",
+        "Please simplify the solution and explain each line of code in beginner-friendly language.\""
+      ],
+      "metadata": {
+        "id": "Br9Qh_qRa9JE"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def celsius_to_fahrenheit(celsius):\n",
+        "    fahrenheit = (celsius * 9/5) + 32\n",
+        "    return fahrenheit"
+      ],
+      "metadata": {
+        "id": "XMyaoM6jbn0z"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "def means you are creating a function.\n",
+        "\n",
+        "celsius_to_fahrenheit is the name of the function.\n",
+        "\n",
+        "celsius is the temperature value that the user enters."
+      ],
+      "metadata": {
+        "id": "Jp6ymkr5bomw"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Module 2\n",
+        "\n",
+        "Expected vs Actual Behavior\n",
+        "Expected: count_vowels(\"Hello\") should return 2 because the vowels are e and o.\n",
+        "Actual: The comment says it should return 3, but that is incorrect. \"Hello\" only contains 2 vowels."
+      ],
+      "metadata": {
+        "id": "8lXiZK_9e2ov"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Add Prints to Trace Execution"
+      ],
+      "metadata": {
+        "id": "OOnERr-IfEE3"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def count_vowels(text):\n",
+        "    vowels = \"aeiou\"\n",
+        "    count = 0\n",
+        "\n",
+        "    for letter in text:\n",
+        "        print(\"Checking:\", letter)\n",
+        "\n",
+        "        if letter in vowels:\n",
+        "            count += 1\n",
+        "            print(\"Found vowel, count =\", count)\n",
+        "\n",
+        "    print(\"Final count =\", count)\n",
+        "    return count"
+      ],
+      "metadata": {
+        "id": "7kJ8DJ9PfFWH"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Hypothesis About the Cause\n",
+        "\n",
+        "The function is intended to count vowels, but there is a syntax error:"
+      ],
+      "metadata": {
+        "id": "9vH8Oh5tfZlU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "count = 0"
+      ],
+      "metadata": {
+        "id": "n5ij0mFrf1CM"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Should be"
+      ],
+      "metadata": {
+        "id": "wpVkmxPHfuHr"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "count = 0"
+      ],
+      "metadata": {
+        "id": "f9gdW7eAfwv6"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Also, if uppercase letters are entered (e.g., \"HELLO\"), they won't be counted because \"E\" and \"O\" are not in \"aeiou\".\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "-SmzwPQdgF_T"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Root Cause\n",
+        "\n",
+        "The main issue is the missing equals sign:"
+      ],
+      "metadata": {
+        "id": "kCnKpnVcgNqE"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "count = 0"
+      ],
+      "metadata": {
+        "id": "brZ2m3B3gSX_"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Without it,the code will not run correctly"
+      ],
+      "metadata": {
+        "id": "QFfw7NLLgX6K"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Simple fix"
+      ],
+      "metadata": {
+        "id": "MZ7DVR2Bge74"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def count_vowels(text):\n",
+        "    vowels = \"aeiou\"\n",
+        "    count = 0\n",
+        "\n",
+        "    for letter in text.lower():\n",
+        "        if letter in vowels:\n",
+        "            count += 1\n",
+        "\n",
+        "    return count"
+      ],
+      "metadata": {
+        "id": "8j-xZ10hhWyg"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Verify with Multiple Test Cases"
+      ],
+      "metadata": {
+        "id": "j7LYKFAnhY0t"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "assert count_vowels(\"Hello\") == 2\n",
+        "assert count_vowels(\"AEIOU\") == 5\n",
+        "assert count_vowels(\"Python\") == 1\n",
+        "assert count_vowels(\"xyz\") == 0\n",
+        "assert count_vowels(\"\") == 0\n",
+        "\n",
+        "print(\"All tests passed!\")"
+      ],
+      "metadata": {
+        "id": "Ozo_kjeqhebq"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The function now correctly counts vowels and works for both lowercase and uppercase text. The expected result for \"Hello\" is 2, not 3."
+      ],
+      "metadata": {
+        "id": "4WDao4JnhnhG"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "\n",
+        "Module 3"
+      ],
+      "metadata": {
+        "id": "bf-7i3n2hr-S"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Plain Language Test Scenarios\n",
+        "\n",
+        "Test that the function:\n",
+        "\n",
+        "Accepts phone numbers with dashes (e.g., 123-456-7890)\n",
+        "Accepts phone numbers with spaces (e.g., 123 456 7890)\n",
+        "Accepts phone numbers with no separators (e.g., 1234567890)\n",
+        "Accepts phone numbers with parentheses around the area code (e.g., (123) 456-7890)\n",
+        "Converts valid inputs to the standard format: (XXX) XXX-XXXX\n",
+        "Rejects phone numbers with too few or too many digits\n",
+        "Rejects inputs containing letters or special characters\n",
+        "Handles empty input correctly\n",
+        "\n",
+        "Examples of inputs and outputs\n",
+        "\n",
+        "| Input            | Expected Output  |\n",
+        "| ---------------- | ---------------- |\n",
+        "| `1234567890`     | `(123) 456-7890` |\n",
+        "| `123-456-7890`   | `(123) 456-7890` |\n",
+        "| `(123) 456-7890` | `(123) 456-7890` |\n",
+        "| `123 456 7890`   | `(123) 456-7890` |\n",
+        "\n",
+        "Edge cases boundaries\n",
+        "| Test Case                          | Expected Result               |\n",
+        "| ---------------------------------- | ----------------------------- |\n",
+        "| Empty string `\"\"`                  | Error message                 |\n",
+        "| `123456789` (9 digits)             | Error message                 |\n",
+        "| `12345678901` (11 digits)          | Error message                 |\n",
+        "| `0000000000`                       | `(000) 000-0000` (if allowed) |\n",
+        "| Input with leading/trailing spaces | Properly formatted output     |\n",
+        "\n",
+        "\n",
+        "Invalid Input Handling\n",
+        "\n",
+        "The function should return an error message for:\n",
+        "| Input          | Reason             |\n",
+        "| -------------- | ------------------ |\n",
+        "| `abc-def-ghij` | Contains letters   |\n",
+        "| `123-45-678`   | Not enough digits  |\n",
+        "| `123456789012` | Too many digits    |\n",
+        "| `123@456#7890` | Invalid characters |\n",
+        "| `None`         | Invalid value      |\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "yzgn_5h4hy0j"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Simple assertation for key cases"
+      ],
+      "metadata": {
+        "id": "Lljz_nN5kBuw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "assert format_phone(\"1234567890\") == \"(123) 456-7890\"\n",
+        "assert format_phone(\"123-456-7890\") == \"(123) 456-7890\"\n",
+        "assert format_phone(\"(123) 456-7890\") == \"(123) 456-7890\"\n",
+        "\n",
+        "assert format_phone(\"123456789\") == \"Error: Invalid phone number.\"\n",
+        "assert format_phone(\"abc-def-ghij\") == \"Error: Invalid phone number.\"\n",
+        "assert format_phone(\"\") == \"Error: Invalid phone number.\"\n",
+        "\n",
+        "print(\"All tests passed!\")"
+      ],
+      "metadata": {
+        "id": "kc92uHKTkE6C"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
